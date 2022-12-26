@@ -1,0 +1,71 @@
+@font-face {
+    src: url(../../../vendor/Inter/Inter-Black.woff) format('woff'),
+         url(../../../vendor/Inter/Inter-Black.woff2) format('woff2');
+    font-family: 'Inter';
+    font-weight: 900;
+  }
+  
+  @font-face {
+    src: url(../../../vendor/Inter/Inter-Regular.woff) format('woff'),
+         url(../../../vendor/Inter/Inter-Regular.woff2) format('woff2');
+    font-family: 'Inter';
+    font-weight: 400;
+  }
+  
+  @font-face {
+    src: url(../../../vendor/Inter/Inter-Medium.woff) format('woff'),
+         url(../../../vendor/Inter/Inter-Medium.woff2) format('woff2');
+    font-family: 'Inter';
+    font-weight: 500;
+  }
+
+.NavTab__content {
+  background-color: black;
+}
+
+.navTab__block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+  min-height: 66px;
+  padding: 0px;
+  max-width: 276px;
+  justify-content: space-between;
+}
+
+.navTab__link-point {
+  list-style-type: none;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  margin: 0;
+  max-width: 276px;
+}
+
+.navTab__link {
+  text-decoration: none;
+  text-decoration-line: underline;
+  color: white;
+  margin: 0;
+}
+
+.navTab__link:hover {
+  opacity: 0.5;
+  cursor: pointer;
+  transition: 1s;
+}
+
+@media screen and (max-width: 500px) {
+  .navTab__block {
+    max-width: 244px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .navTab__link-point {
+    font-size: 11px;
+    line-height: 16px;
+  }
+}

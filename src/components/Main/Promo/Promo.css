@@ -1,0 +1,71 @@
+@font-face {
+    src: url(../../../vendor/Inter/Inter-Black.woff) format('woff'),
+         url(../../../vendor/Inter/Inter-Black.woff2) format('woff2');
+    font-family: 'Inter';
+    font-weight: 900;
+  }
+  
+  @font-face {
+    src: url(../../../vendor/Inter/Inter-Regular.woff) format('woff'),
+         url(../../../vendor/Inter/Inter-Regular.woff2) format('woff2');
+    font-family: 'Inter';
+    font-weight: 400;
+  }
+  
+  @font-face {
+    src: url(../../../vendor/Inter/Inter-Medium.woff) format('woff'),
+         url(../../../vendor/Inter/Inter-Medium.woff2) format('woff2');
+    font-family: 'Inter';
+    font-weight: 500;
+  }
+
+.promo__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  flex-direction: column;
+  background-color: #073042;
+  position: relative;
+  max-height: 524px;
+}
+  
+.promo__background-logo {
+  width: 320px;
+  height: 320px;
+  margin-top: 156px;
+  opacity: 20%;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  z-index: 1;
+}
+
+.promo__title {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 58px;
+  text-align: center;
+  color: white;
+  z-index: 2;
+  max-width: 730px;
+  margin: 0;
+  padding: 184px 0px 224px 0px;
+}
+
+@media screen and (max-width: 520px) {
+  .promo__title {
+    font-size: 31px;
+    line-height: 39px;
+    padding: 207px 10px 246px 10px;
+    max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+  .promo__background-logo {
+    width: 248px;
+    height: 248px;
+    }
+}

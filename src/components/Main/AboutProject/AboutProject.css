@@ -1,0 +1,120 @@
+@font-face {
+    src: url(../../../vendor/Inter/Inter-Black.woff) format('woff'),
+         url(../../../vendor/Inter/Inter-Black.woff2) format('woff2');
+    font-family: 'Inter';
+    font-weight: 900;
+  }
+  
+  @font-face {
+    src: url(../../../vendor/Inter/Inter-Regular.woff) format('woff'),
+         url(../../../vendor/Inter/Inter-Regular.woff2) format('woff2');
+    font-family: 'Inter';
+    font-weight: 400;
+  }
+  
+  @font-face {
+    src: url(../../../vendor/Inter/Inter-Medium.woff) format('woff'),
+         url(../../../vendor/Inter/Inter-Medium.woff2) format('woff2');
+    font-family: 'Inter';
+    font-weight: 500;
+  }
+
+.aboutProject__content {
+  justify-items: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 110px 70px 110px 70px;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 770px) {
+  .aboutProject__content {
+    padding: 90px 50px 90px 50px;
+  }
+}
+
+.aboutProject__title {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0;
+  padding-bottom: 17px;
+}
+
+.aboutProject__text {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+  padding-top: 9px;
+}
+
+.aboutProject__column {
+  display: flex;
+  flex-direction: column;
+  max-width: 550px;
+}
+
+.aboutProject__text-block {
+  display: flex;
+  flex-direction: row;
+  padding-top: 70px;
+  border-top: 1px solid black;
+  justify-content: space-between;
+}
+
+.aboutProject__grid-line {
+  /*min-height: calc(100vh - 72px);*/
+  max-width: 1140;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: repeat(2, 36px);
+  text-align: center;
+  padding-top: 110px;
+}
+
+.aboutProject__green-line {
+  background-color: #2BE080;
+}
+
+.aboutProject__grey-line {
+  background-color: #F2F2F2;
+}
+
+@media screen and (max-width: 650px) {
+  .aboutProject__text-block {
+    flex-direction: column;
+    gap: 56px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .aboutProject__content {
+    padding: 70px 14px 70px 14px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .aboutProject__text {
+    font-size: 11px;
+    line-height: 16px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .aboutProject__title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .aboutProject__grid-line {
+    padding-top: 60px;
+  }
+}

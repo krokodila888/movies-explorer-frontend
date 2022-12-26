@@ -1,0 +1,124 @@
+@font-face {
+ src: url(../../../vendor/Inter/Inter-Black.woff) format('woff'),
+   url(../../../vendor/Inter/Inter-Black.woff2) format('woff2');
+  font-family: 'Inter';
+  font-weight: 900;
+}
+
+@font-face {
+  src: url(../../../vendor/Inter/Inter-Regular.woff) format('woff'),
+    url(../../../vendor/Inter/Inter-Regular.woff2) format('woff2');
+  font-family: 'Inter';
+  font-weight: 400;
+}
+
+@font-face {
+  src: url(../../../vendor/Inter/Inter-Medium.woff) format('woff'),
+    url(../../../vendor/Inter/Inter-Medium.woff2) format('woff2');
+  font-family: 'Inter';
+  font-weight: 500;
+}
+
+.techs__content {
+  background-color: #F2F2F2;
+
+}
+
+.techs__content-inside {
+  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 1280px;
+  padding: 110px 70px 110px 70px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 770px) {
+  .techs__content-inside {
+    padding: 90px 50px 90px 50px;
+  }
+}
+
+.techs__title {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0;
+  padding-bottom: 23px;
+  max-width: 1280px;
+}
+
+.techs__main-title {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 58px;
+  margin: 0;
+  padding-bottom: 23px;
+  text-align: center;
+  padding-top: 90px;
+}
+
+.techs__text {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+  text-align: center;
+  align-self: center;
+}
+
+.techs__text-background {
+  background-color: #E8E8E8;
+  border-radius: 10px;
+  min-height: 60px;
+  display: grid;
+  align-content: center;
+  max-width: 90px;
+}
+
+.techs__column {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid black;
+  max-width: 1280px;
+}
+
+.techs__grid-line {
+  max-width: 1140;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(7, 90px);
+  grid-template-rows: repeat(1, 60px);
+  gap: 10px;
+  text-align: center;
+  padding-top: 110px;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .techs__text {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .techs__grid-line {
+    grid-template-columns: repeat(auto-fit, minmax(10px, 84px));
+    grid-template-rows: repeat(auto-fit, 57px);
+    padding-top: 83px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .techs__main-title {
+    font-size: 30px;
+    line-height: 36px;
+    padding-top: 60px;
+  }
+}

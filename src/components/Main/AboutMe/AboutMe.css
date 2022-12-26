@@ -1,0 +1,174 @@
+@font-face {
+  src: url(../../../vendor/Inter/Inter-Black.woff) format('woff'),
+    url(../../../vendor/Inter/Inter-Black.woff2) format('woff2');
+  font-family: 'Inter';
+  font-weight: 900;
+}
+
+@font-face {
+  src: url(../../../vendor/Inter/Inter-Regular.woff) format('woff'),
+    url(../../../vendor/Inter/Inter-Regular.woff2) format('woff2');
+  font-family: 'Inter';
+  font-weight: 400;
+}
+
+@font-face {
+  src: url(../../../vendor/Inter/Inter-Medium.woff) format('woff'),
+    url(../../../vendor/Inter/Inter-Medium.woff2) format('woff2');
+  font-family: 'Inter';
+  font-weight: 500;
+}
+
+.aboutMe__content {
+  justify-items: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 110px 70px 101px 70px;
+  max-width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media screen and (max-width: 770px) {
+  .aboutMe__content {
+    padding: 90px 50px 90px 50px;
+  }
+}
+
+.aboutMe__title {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0;
+  padding-bottom: 23px;
+}
+
+.aboutMe__name-text {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 58px;
+  margin: 0;
+  padding-bottom: 18px;
+}
+
+.aboutMe__status-text {
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  margin: 0;
+  padding-bottom: 23px;
+}
+
+.aboutMe__text {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+  padding-top: 3px;
+  max-width: 600px;
+  padding-right: 49px;
+}
+
+.aboutMe__column {
+  display: flex;
+  flex-direction: column;
+  max-width: 550px;
+  justify-content: space-between;
+}
+
+.aboutMe__text-block {
+  display: flex;
+  flex-direction: row;
+  padding-top: 70px;
+  border-top: 1px solid black;
+  justify-content: space-between;
+}
+
+.aboutMe__photo {
+  width: 270px;
+  height: 327px;
+  border-radius: 10px;
+}
+
+.aboutMe__link {
+  text-decoration: none;
+  color: black;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.aboutMe__link:hover {
+  opacity: 0.5;
+  cursor: pointer;
+  transition: 1s;
+}
+
+@media screen and (max-width: 770px) {
+  .aboutMe__photo {
+    width: 255px;
+    height: 307px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .aboutMe__text {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .aboutMe__text {
+    font-size: 12px;
+    line-height: 18px;
+    max-width: 364px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .aboutMe__name-text {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .aboutMe__text-block {
+    flex-direction: column-reverse;
+    padding-top: 60px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .aboutMe__photo {
+    padding-bottom: 40px;
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .aboutMe__content {
+    padding: 70px 14px 70px 14px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .aboutMe__text {
+    padding-right: 0;
+    font-size: 11px;
+    line-height: 16px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .aboutMe__link {
+    padding-top: 40px;
+  }
+}

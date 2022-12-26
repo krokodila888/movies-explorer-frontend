@@ -1,0 +1,192 @@
+@font-face {
+  src: url(../../vendor/Inter/Inter-Black.woff) format('woff'),
+    url(../../vendor/Inter/Inter-Black.woff2) format('woff2');
+  font-family: 'Inter';
+  font-weight: 900;
+}
+
+@font-face {
+  src: url(../../vendor/Inter/Inter-Regular.woff) format('woff'),
+    url(../../vendor/Inter/Inter-Regular.woff2) format('woff2');
+  font-family: 'Inter';
+  font-weight: 400;
+}
+
+@font-face {
+  src: url(../../vendor/Inter/Inter-Medium.woff) format('woff'),
+    url(../../vendor/Inter/Inter-Medium.woff2) format('woff2');
+  font-family: 'Inter';
+  font-weight: 500;
+}
+
+.login__backdround {
+  display: flex;
+  width: 100%;
+  height: calc(100% + 270px);
+  position: absolute;
+  top: -119px;
+  left: 0;
+  justify-content: center;
+  align-items: flex-start;
+  opacity: 0;
+  transition: visibility, 900ms ease;
+}
+
+.login__button {
+  width: 396px;
+  height: 45px;
+  color: rgb(255, 255, 255);
+  background: #3456F3;
+  border-radius: 3px;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  flex-shrink: 0;
+  margin-top: 179px;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  align-self: center;
+}
+
+.login__button:hover {
+  opacity: 0.5;
+  cursor: pointer;
+  transition: 1s;
+}
+
+@media screen and (max-width: 500px) {
+  .login__button {
+    width: 238px;
+    height: 46px;
+    margin-top: 140px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+.login__input {
+  background: #F9F9F9;
+  border-radius: 8px;
+  font-family: 'Inter';
+  border: none;
+  color: #000000;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  width: 366px;
+  height: 16px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 15px;
+}
+
+.login__input:-internal-autofill-selected {
+  -webkit-box-shadow: 0 0 0px 1000px #F9F9F9 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.login__input:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 500px) {
+  .login__input {
+    max-width: 230px;
+  }
+}
+
+.login__container {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  position: inherit;
+  max-width: 396px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding-top: 70px;
+}
+
+.login__logo {
+  width: 38px;
+  height: 38px;
+}
+
+@media screen and (max-width: 500px) {
+  .login__container {
+    min-width: 282px;
+    min-height: 322px;
+    padding: 25px 22px;
+  }
+}
+
+.login__title {
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  margin: 0;
+  color: rgb(0, 0, 0);
+  margin: 0;
+  padding: 40px 0;
+  text-align: center;
+  align-self: flex-start;
+} 
+
+@media screen and (max-width: 500px) {
+  .login__title {
+    font-size: 18px;
+    line-height: 22px;
+    padding-bottom: 30px;
+  }
+}
+
+.login__form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: inherit;
+}
+
+.login__text {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: #A0A0A0;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.login__underbottom-text {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #A0A0A0;
+  margin: 0;
+}
+
+.login__link {
+  color: #3456F3;
+  text-decoration: none;
+}
+
+.login__link:hover {
+  opacity: 0.5;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.login__link-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 16px;
+  gap: 6px;
+}

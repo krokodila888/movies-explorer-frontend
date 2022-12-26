@@ -1,0 +1,111 @@
+@font-face {
+  src: url(../../vendor/Inter/Inter-Black.woff) format('woff'),
+    url(../../vendor/Inter/Inter-Black.woff2) format('woff2');
+  font-family: 'Inter';
+  font-weight: 900;
+}
+
+@font-face {
+  src: url(../../vendor/Inter/Inter-Regular.woff) format('woff'),
+    url(../../vendor/Inter/Inter-Regular.woff2) format('woff2');
+  font-family: 'Inter';
+  font-weight: 400;
+}
+
+@font-face {
+  src: url(../../vendor/Inter/Inter-Medium.woff) format('woff'),
+    url(../../vendor/Inter/Inter-Medium.woff2) format('woff2');
+  font-family: 'Inter';
+font-weight: 500;
+}
+
+.profile {
+  position: relative;
+}
+
+.profile__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  flex-basis: auto;
+  align-self: center;
+  z-index: 2;
+  max-width: 410px;
+  padding: 74px 36px 37px 36px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.profile__title {
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  margin: 0;
+  color: rgb(0, 0, 0);
+  margin: 0;
+  padding-bottom: 123px;
+  text-align: center;
+  align-self: center;
+} 
+
+.profile__text {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: #000000;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.profile__underbottom-text {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #A0A0A0;
+  margin: 0;
+}
+
+.profile__underbottom-text:last-child {
+  color: #FF004D;
+}
+
+.profile__link {
+  text-decoration: none;
+}
+
+.profile__link:hover {
+  opacity: 0.5;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.profile__link-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 220px;
+  gap: 16px;
+  align-items: center;
+}
+
+.profile__link:hover {
+  opacity: 0.5;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.profile__container1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid #E6E6E6;
+}
+
+.profile__container1:nth-child(3) {
+  border-bottom: none;
+}
+
