@@ -1,0 +1,11 @@
+.element {background-color: white;
+  min-height: 361px;
+  min-width: 282px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.element:hover {
+  cursor: pointer;
+}

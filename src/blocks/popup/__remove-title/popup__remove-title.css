@@ -1,0 +1,10 @@
+.popup__remove-title {
+    padding-bottom: 19px;
+  } 
+          
+@media screen and (max-width: 500px) {
+  .popup__remove-title {
+    padding-bottom: 19px;
+  }
+}
+  

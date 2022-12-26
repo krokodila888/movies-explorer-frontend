@@ -1,0 +1,26 @@
+.sign__input {
+    font-family: inherit;
+    border: none;
+    outline: none; 
+    border-bottom: 2px solid #CCCCCC;
+    color: #CCCCCC;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 22px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    background: #000000 !important;
+    
+  }
+  
+  .sign__input:focus {
+    outline: none;
+  }
+  
+  @media screen and (max-width: 500px) {
+    .sign__input {
+        max-width: 238px;
+        font-size: 16px;
+        line-height: 19px;}
+  }

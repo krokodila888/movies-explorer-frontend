@@ -1,0 +1,11 @@
+.popup__avatar {
+    min-height: 272px;
+    background-color: white;
+    
+  }
+  
+  @media screen and (max-width: 500px) {
+    .popup__avatar {
+      min-height: 272px;}
+  }
+  

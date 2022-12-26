@@ -1,0 +1,10 @@
+.header__right-block {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+}
+
+@media screen and (max-width: 500px) {
+  .header__right-block {
+    flex-direction: column;}
+}

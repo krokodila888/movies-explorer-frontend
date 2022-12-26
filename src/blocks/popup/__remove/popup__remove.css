@@ -1,0 +1,9 @@
+.popup__remove {
+  min-height: 181px;
+  background-color: white;
+}
+  
+@media screen and (max-width: 500px) {
+  .popup__remove {
+    min-height: 181px;}
+}

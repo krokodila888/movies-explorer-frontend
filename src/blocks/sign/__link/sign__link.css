@@ -1,0 +1,15 @@
+.sign__link {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: right;
+    color: white;
+    align-self: center;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    margin: 0;
+}
+
+.sign__link:hover {
+    opacity: 0.5;
+  }
