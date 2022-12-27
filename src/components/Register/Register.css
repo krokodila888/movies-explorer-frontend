@@ -59,9 +59,9 @@
 
 @media screen and (max-width: 500px) {
   .register__button {
-    width: 238px;
-    height: 46px;
-    margin-top: 140px;
+    width: 260px;
+    height: 45px;
+    margin-top: 169px;
     font-size: 14px;
     line-height: 17px;
   }
@@ -117,11 +117,18 @@
   height: 38px;
 }
 
+@media screen and (max-width: 770px) {
+  .register__container {
+    padding-top: 323px;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .register__container {
     min-width: 282px;
     min-height: 322px;
-    padding: 25px 22px;
+    padding: 70px 30px 40px 30px;
+    align-items: center;
   }
 }
 
@@ -143,6 +150,7 @@
     font-size: 18px;
     line-height: 22px;
     padding-bottom: 30px;
+    align-self: center;
   }
 }
 
@@ -171,6 +179,14 @@
   color: #A0A0A0;
   margin: 0;
 }
+
+@media screen and (max-width: 500px) {
+  .register__underbottom-text {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
 
 .register__link {
   color: #3456F3;

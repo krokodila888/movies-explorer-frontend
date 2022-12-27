@@ -1,11 +1,8 @@
 import logo from '../../images/logo__round.svg';
-import { Link, NavLink } from 'react-router-dom';
-import { Route, Routes } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Header.css';
 
-function Header(props) {
-
-  const {email, exitProfile} = props;
+function Header() {
 
   return (
     <header className="header">

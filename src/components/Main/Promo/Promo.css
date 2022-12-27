@@ -29,6 +29,12 @@
   position: relative;
   max-height: 524px;
 }
+
+@media screen and (max-width: 520px) {
+  .promo__content {
+    max-height: 570px;
+    }
+}
   
 .promo__background-logo {
   width: 320px;

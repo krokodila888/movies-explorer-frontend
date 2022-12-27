@@ -1,12 +1,10 @@
-import logo from '../../images/logo__round.svg';
+import logo from '../../images/logo-smile.svg';
 import account from '../../images/icon-account.svg';
 import { Link, NavLink } from 'react-router-dom';
 import { Route, Routes } from 'react-router-dom';
 import './Header.css';
 
-function HeaderLogin(props) {
-
-  const {email, exitProfile} = props;
+function HeaderLogin() {
 
   return (
     <header className="header header__login">
@@ -18,7 +16,7 @@ function HeaderLogin(props) {
             className="header__logo"
           />
         </NavLink>
-        <div className="header__right-block">
+        <div className="right-block-login">
           <NavLink to="/movies" className="header__black-link">
             Фильмы
           </NavLink>

@@ -46,10 +46,28 @@
   height: 38px;
 }
 
+.header__logo:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  transition: 1s;
+}
+
 .header__right-block {
    justify-items: center;
    display: flex;
    align-items: center;
+}
+
+.header__right-block-login {
+  justify-items: center;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 770px) {
+  .header__right-block-login {
+    display: none;
+  }
 }
 
 .header__link {
@@ -113,12 +131,13 @@
 @media screen and (max-width: 520px) {
   .header__content {
     padding: 18px 14px 18px 14px;
-    }
+  }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 500px) {
   .header__link {
     font-size: 10px;
     line-height: 16px;
+    padding-right: 14px;
   }
 }

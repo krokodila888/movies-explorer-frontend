@@ -15,11 +15,11 @@ function Profile (props) {
           <p className="profile__title">
             Привет, {currentUser.userName}!
           </p>
-          <div className="profile__container1">
+          <div className="profile__row-container">
             <p className="profile__text">Имя</p>
             <p className="profile__text">{currentUser.userName}</p>
           </div>
-          <div className="profile__container1">
+          <div className="profile__row-container">
             <p className="profile__text">E-Mail</p>
             <p className="profile__text">{currentUser.Email}</p>
           </div>

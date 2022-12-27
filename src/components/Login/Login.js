@@ -17,7 +17,7 @@ function Login (props) {
     }
   
   return(
-     <div className="login__background">
+    <div className="login__background">
       <div className="login__container">
         <Link to="/">
           <img
