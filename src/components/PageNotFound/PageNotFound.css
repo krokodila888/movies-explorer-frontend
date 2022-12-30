@@ -1,23 +1,4 @@
-@font-face {
-    src: url(../../vendor/Inter/Inter-Black.woff) format('woff'),
-         url(../../vendor/Inter/Inter-Black.woff2) format('woff2');
-    font-family: 'Inter';
-    font-weight: 900;
-  }
-  
-  @font-face {
-    src: url(../../vendor/Inter/Inter-Regular.woff) format('woff'),
-         url(../../vendor/Inter/Inter-Regular.woff2) format('woff2');
-    font-family: 'Inter';
-    font-weight: 400;
-  }
-  
-  @font-face {
-    src: url(../../vendor/Inter/Inter-Medium.woff) format('woff'),
-         url(../../vendor/Inter/Inter-Medium.woff2) format('woff2');
-    font-family: 'Inter';
-    font-weight: 500;
-  }
+@import url(../../vendor/fonts.css);
 
 .pageNotFound {
   display: flex;
@@ -54,4 +35,25 @@
   opacity: 0.5;
   cursor: pointer;
   transition: 1s;
+}
+
+@media screen and (max-width: 550px) {
+  .pageNotFound__title {
+    font-size: 80px;
+    line-height: 97px;
+    padding-top: 329px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .pageNotFound__text {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .pageNotFound__link {
+    padding-top: 284px;
+  }
 }

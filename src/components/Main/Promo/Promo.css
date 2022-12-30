@@ -1,23 +1,4 @@
-@font-face {
-    src: url(../../../vendor/Inter/Inter-Black.woff) format('woff'),
-         url(../../../vendor/Inter/Inter-Black.woff2) format('woff2');
-    font-family: 'Inter';
-    font-weight: 900;
-  }
-  
-  @font-face {
-    src: url(../../../vendor/Inter/Inter-Regular.woff) format('woff'),
-         url(../../../vendor/Inter/Inter-Regular.woff2) format('woff2');
-    font-family: 'Inter';
-    font-weight: 400;
-  }
-  
-  @font-face {
-    src: url(../../../vendor/Inter/Inter-Medium.woff) format('woff'),
-         url(../../../vendor/Inter/Inter-Medium.woff2) format('woff2');
-    font-family: 'Inter';
-    font-weight: 500;
-  }
+@import url(../../../vendor/fonts.css);
 
 .promo__content {
   display: flex;
@@ -33,18 +14,19 @@
 @media screen and (max-width: 520px) {
   .promo__content {
     max-height: 570px;
-    }
+  }
 }
   
 .promo__background-logo {
   width: 320px;
   height: 320px;
   margin-top: 156px;
-  opacity: 20%;
   margin: auto;
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
   z-index: 1;
+  color: #FFFFFF;
+  opacity: 0.2;
 }
 
 .promo__title {

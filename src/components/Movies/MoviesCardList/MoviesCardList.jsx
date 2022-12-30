@@ -1,6 +1,6 @@
-import React, { useEffect, useState, useContext } from "react";
-import './MoviesCardList.css';
+import React from "react";
 import MoviesCard from '../MoviesCard/MoviesCard.jsx';
+import './MoviesCardList.css';
 
 function MoviesCardList() {
  const cardsArray = [1, 2, 3, 4, 5];

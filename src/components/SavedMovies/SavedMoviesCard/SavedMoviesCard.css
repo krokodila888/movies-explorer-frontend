@@ -1,0 +1,122 @@
+.savedMoviesCard__card {
+  max-width: 270px;
+  height: 240px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  object-fit: cover;
+  margin: 0;
+}
+
+@media screen and (max-width: 770px) {
+  .savedMoviesCard__card {
+    max-width: 339px;
+    height: 274px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .savedMoviesCard__card {
+    max-width: 300px;
+    height: 248px;
+  }
+}
+
+.savedMoviesCard__image {
+  max-width: 270px;
+  height: 151px;
+  margin: 0;
+}
+
+@media screen and (max-width: 770px) {
+  .savedMoviesCard__image {
+    max-width: 339px;
+    height: 190px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .savedMoviesCard__image {
+    max-width: 300px;
+    height: 168px;
+  }
+}
+
+.savedMoviesCard__title-container {
+  max-width: 270px;
+  min-height: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-bottom: 1px solid #E8E8E8;
+}
+
+@media screen and (max-width: 770px) {
+  .savedMoviesCard__title-container {
+    max-width: 339px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .savedMoviesCard__title-container {
+    max-width: 300px;
+  }
+}
+  
+.savedMoviesCard__title {
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: start;
+  color: #000000;
+  max-width: 246px;
+  margin: 0;
+  padding: 14px 0 29px 0;
+}
+  
+.savedMoviesCard__duration {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  color: #A0A0A0;
+  padding: 6px 0 0 0;
+  margin: 0;
+}
+
+.savedMoviesCard__add-button {
+  width: 24px;
+  height: 24px;
+  background-image: url(../../../images/heart-white.svg);
+  background-position: center;
+  border: none;
+  background-size: contain;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
+.savedMoviesCard__del-button {
+  width: 24px;
+  height: 24px;
+  background-image: url(../../../images/button-del.svg);
+  background-position: center;
+  border: none;
+  background-size: contain;
+  border-radius: 50%;
+  margin-top: 10px;
+  opacity: 0;
+}
+
+.savedMoviesCard__card:hover .savedMoviesCard__del-button {
+  cursor: pointer;
+  transition: 1s;
+  opacity: 1;
+}
+
+.savedMoviesCard__add-button-active {
+  background-image: url('../../../images/heart-pink.svg');
+}

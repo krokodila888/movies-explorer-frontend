@@ -1,13 +1,29 @@
 import logo from '../../images/logo-smile.svg';
 import account from '../../images/icon-account.svg';
-import { Link, NavLink } from 'react-router-dom';
-import { Route, Routes } from 'react-router-dom';
+import React, { useState } from "react";
+import { NavLink } from 'react-router-dom';
 import './Header.css';
+import Navigation from  '../Navigation/Navigation.jsx';
 
 function HeaderLogin() {
 
+  const [isNavigationOpen, setIsNavigationOpen] = useState(false);
+
+  function openNavigation() {
+    return setIsNavigationOpen(true)
+  }
+
+  function closeNavigation() {
+    setIsNavigationOpen(false);
+  }
+
   return (
     <header className="header header__login">
+      <Navigation 
+        onClose={closeNavigation} 
+        isNavigationOpen={isNavigationOpen} 
+        openNavigation={openNavigation} 
+      />
       <div className="header__content">
         <NavLink to="/" className="navTab__link">
           <img
@@ -16,7 +32,7 @@ function HeaderLogin() {
             className="header__logo"
           />
         </NavLink>
-        <div className="right-block-login">
+        <div className="header__right-block-login">
           <NavLink to="/movies" className="header__black-link">
             Фильмы
           </NavLink>
