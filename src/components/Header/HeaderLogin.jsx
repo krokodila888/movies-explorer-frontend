@@ -1,5 +1,4 @@
-import logo from '../../images/logo-smile.svg';
-import account from '../../images/icon-account.svg';
+import logo from '../../images/logo_smile.svg';
 import React, { useState } from "react";
 import { NavLink } from 'react-router-dom';
 import './Header.css';
@@ -25,29 +24,24 @@ function HeaderLogin() {
         openNavigation={openNavigation} 
       />
       <div className="header__content">
-        <NavLink to="/" className="navTab__link">
-          <img
-            src={logo}
-            alt="Логотип"
-            className="header__logo"
-          />
-        </NavLink>
-        <div className="header__right-block-login">
-          <NavLink to="/movies" className="header__black-link">
+        <div className="header__left-block-login">
+          <NavLink to="/" className="navTab__link">
+            <img
+              src={logo}
+              alt="Логотип"
+              className="header__logo"
+            />
+          </NavLink>
+          <NavLink to="/movies" className="header__film-link">
             Фильмы
           </NavLink>
-          <NavLink to="/saved-movies" className="header__black-link-normal">
+          <NavLink to="/saved-movies" className="header__film-link">
             Сохранённые фильмы
           </NavLink>
-          <NavLink to="/profile" className="header__black-link">
+        </div>
+          <NavLink to="/profile" className="header__account-link">
             Аккаунт
           </NavLink>
-          <img
-            src={account}
-            alt="Значок аккаунта"
-            className="header__icon"
-          />
-        </div>
       </div>
     </header>
     );

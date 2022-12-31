@@ -1,4 +1,4 @@
-import logo from '../../images/logo__round.svg';
+import logo from '../../images/logo_smile.svg';
 import { NavLink } from 'react-router-dom';
 import './Header.css';
 

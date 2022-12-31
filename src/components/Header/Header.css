@@ -1,32 +1,13 @@
-@font-face {
-  src: url(../../vendor/Inter/Inter-Black.woff) format('woff'),
-    url(../../vendor/Inter/Inter-Black.woff2) format('woff2');
-  font-family: 'Inter';
-  font-weight: 900;
-}
-  
-@font-face {
-  src: url(../../vendor/Inter/Inter-Regular.woff) format('woff'),
-    url(../../vendor/Inter/Inter-Regular.woff2) format('woff2');
-  font-family: 'Inter';
-  font-weight: 400;
-}
-  
-@font-face {
-  src: url(../../vendor/Inter/Inter-Medium.woff) format('woff'),
-   url(../../vendor/Inter/Inter-Medium.woff2) format('woff2');
-  font-family: 'Inter';
-  font-weight: 500;
-}
+@import url(../../vendor/fonts.css);
 
 .header {
-  background-color: #073042;
+  background-color: #FAFAFA;;
   position: relative;
 }
 
 .header__content {
   max-width: 1280px;
-  padding: 18px 60px 18px 60px;
+  padding: 18px 70px 18px 70px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -64,8 +45,20 @@
   align-items: center;
 }
 
+.header__left-block-login {
+ justify-items: center;
+ display: flex;
+ align-items: center;
+}
+
 @media screen and (max-width: 770px) {
-  .header__right-block-login {
+  .header__film-link {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .header__account-link {
     display: none;
   }
 }
@@ -76,26 +69,37 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 16px;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
-.header__black-link {
+.header__account-link {
   text-decoration: none;
   font-family: 'Inter';
   font-weight: 500;
   font-size: 12px;
   line-height: 16px;
   color: rgb(0, 0, 0);
+  background-color: #F4F4F4;
+  border-radius: 20px;
+  padding: 8px 20px;
 }
 
-.header__black-link-normal {
+.header__film-link {
   text-decoration: none;
   font-family: 'Inter';
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
   color: rgb(0, 0, 0);
-  padding: 0 50px 0 20px;
+}
+
+.header__film-link:last-child {
+  font-weight: 400;
+  padding-left: 16px;
+}
+
+.header__film-link:nth-child(2) {
+  padding-left: 44px;
 }
 
 .header__link:first-child {
@@ -103,10 +107,10 @@
 }
 
 .header__login-link {
-  background-color: #2BE080;
+  background-color: #3456F3;
   border-radius: 3px;
   padding: 8px 20px 8px 20px;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 .header__link:hover {

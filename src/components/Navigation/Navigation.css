@@ -128,8 +128,12 @@
   text-decoration: none;
 }
 
-.navigation__link:nth-child(-n+2) {
-  padding-bottom: 28px;
+.navigation__link:nth-child(n+1) {
+  padding-top: 28px;
+}
+
+.navigation__link:nth-child(2) {
+  border-bottom: 2px solid black;
 }
 
 .navigation__profile-link {
