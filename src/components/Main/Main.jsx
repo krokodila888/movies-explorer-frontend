@@ -7,15 +7,15 @@ import AboutMe from './AboutMe/AboutMe.jsx';
 import Portfolio from './Portfolio/Portfolio.jsx';
 import Header from '../Header/Header.jsx';
 import Footer from '../Footer/Footer.jsx';
+import './Main.css';
 
 function Main() {
 
   return (
-    <main className="content">
+    <main className="main__content">
       <section className="profile">
         <Header/>
         <Promo/>
-        <NavTab/>
         <AboutProject/>
         <Techs/>
         <AboutMe/>

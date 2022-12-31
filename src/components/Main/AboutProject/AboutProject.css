@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   padding: 110px 70px 110px 70px;
-  max-width: 1280px;
+  max-width: 1140px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -17,13 +17,22 @@
   }
 }
 
+.aboutProject__main-title {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 27px;
+  margin: 0;
+  padding-bottom: 23px;
+}
+
 .aboutProject__title {
   font-family: 'Inter';
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
   margin: 0;
-  padding-bottom: 17px;
+  padding-bottom: 23px;
 }
 
 .aboutProject__text {
@@ -33,6 +42,10 @@
   line-height: 20px;
   margin: 0;
   padding-top: 9px;
+}
+
+.aboutProject__grid-text {
+  line-height: 17px;
 }
 
 .aboutProject__column {
@@ -60,7 +73,7 @@
 }
 
 .aboutProject__green-line {
-  background-color: #2BE080;
+  background-color: #3456F3;
 }
 
 .aboutProject__grey-line {

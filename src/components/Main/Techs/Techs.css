@@ -1,7 +1,7 @@
 @import url(../../../vendor/fonts.css);
 
 .techs__content {
-  background-color: #F2F2F2;
+  background-color: #F5F5F5;
 
 }
 
@@ -9,8 +9,8 @@
   justify-items: center;
   display: flex;
   flex-direction: column;
-  max-width: 1280px;
-  padding: 110px 70px 110px 70px;
+  max-width: 1140px;
+  padding: 100px 70px 100px 70px;
   position: relative;
   margin-left: auto;
   margin-right: auto;
@@ -25,11 +25,11 @@
 .techs__title {
   font-family: 'Inter';
   font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 22px;
+  line-height: 27px;
   margin: 0;
   padding-bottom: 23px;
-  max-width: 1280px;
+  max-width: 1140px;
 }
 
 .techs__main-title {
@@ -38,7 +38,7 @@
   font-size: 50px;
   line-height: 58px;
   margin: 0;
-  padding-bottom: 23px;
+  padding-bottom: 26px;
   text-align: center;
   padding-top: 90px;
 }
@@ -77,7 +77,7 @@
   grid-template-rows: repeat(1, 60px);
   gap: 10px;
   text-align: center;
-  padding-top: 110px;
+  padding-top: 100px;
   justify-content: center;
 }
 

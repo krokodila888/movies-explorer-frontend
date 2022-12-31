@@ -7,12 +7,14 @@ function MoviesCard() {
 
   return (
     <li className="moviesCard__card">
-      <img src={poster} alt="Кадр из фильма" className="moviesCard__image" />
       <div className="moviesCard__title-container">
-        <h3 className="moviesCard__title">Бег это свобода</h3>
+        <div className="moviesCard__text-container">
+          <h3 className="moviesCard__title">Бег это свобода</h3>
+          <p className="moviesCard__duration">1ч 42м</p>
+        </div>
         <button onClick={() => setIsSaved(!isSaved)} type="button" aria-label="save" className={isSaved ? "moviesCard__add-button moviesCard__add-button-active" : "moviesCard__add-button"}></button>
       </div>
-      <p className="moviesCard__duration">1ч 42м</p>
+      <img src={poster} alt="Кадр из фильма" className="moviesCard__image" />
     </li>
   )
 }

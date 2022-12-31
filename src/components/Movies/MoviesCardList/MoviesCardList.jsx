@@ -7,9 +7,7 @@ function MoviesCardList() {
   return (
     <section className="moviesCardList__content">
       <ul className="moviesCardList__container">
-
-          {cardsArray.map((item) => <MoviesCard />)}
-
+        {cardsArray.map((item) => <MoviesCard />)}
       </ul>
       <button className="moviesCardList__button">Еще</button>
     </section>

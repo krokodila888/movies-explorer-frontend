@@ -4,11 +4,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15px;
   flex-direction: column;
-  background-color: #073042;
+  background-color: #F5F5F5;
   position: relative;
-  max-height: 524px;
+  min-height: 513px;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 10px;
 }
 
 @media screen and (max-width: 520px) {
@@ -35,7 +37,7 @@
   font-size: 50px;
   line-height: 58px;
   text-align: center;
-  color: white;
+  color: black;
   z-index: 2;
   max-width: 730px;
   margin: 0;

@@ -6,7 +6,7 @@
 }
 
 .header__content {
-  max-width: 1280px;
+  max-width: 1140px;
   padding: 18px 70px 18px 70px;
   display: flex;
   flex-direction: row;
@@ -14,6 +14,7 @@
   align-items: center;
   margin-left: auto;
   margin-right: auto;
+  background-color: #FAFAFA;
 }
 
 @media screen and (max-width: 770px) {
@@ -117,10 +118,6 @@
   opacity: 0.8;
   cursor: pointer;
   transition: 1s;
-}
-
-.header__login {
-  background-color: #ffffff;
 }
 
 .header__icon {

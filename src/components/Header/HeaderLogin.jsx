@@ -17,7 +17,7 @@ function HeaderLogin() {
   }
 
   return (
-    <header className="header header__login">
+    <header className="header">
       <Navigation 
         onClose={closeNavigation} 
         isNavigationOpen={isNavigationOpen} 
@@ -25,7 +25,7 @@ function HeaderLogin() {
       />
       <div className="header__content">
         <div className="header__left-block-login">
-          <NavLink to="/" className="navTab__link">
+          <NavLink to="/">
             <img
               src={logo}
               alt="Логотип"

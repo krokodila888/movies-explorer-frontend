@@ -25,7 +25,7 @@
   display: flex;
   flex-direction: column;
   padding: 79px 70px 20px 70px;
-  max-width: 1280px;
+  max-width: 1149px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -48,7 +48,7 @@
   font-size: 13px;
   line-height: 16px;
   margin: 0;
-  padding-bottom: 23px;
+  padding-bottom: 26px;
   color: #A0A0A0;
   text-align: center;
   align-self: center;
@@ -89,7 +89,7 @@
   padding-top: 20px;
   flex-direction: row;
   align-items: stretch;
-  border-top: 1px solid black;
+  border-top: 1px solid #E8E8E8;
   justify-content: space-between;
 }
 

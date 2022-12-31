@@ -5,8 +5,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 110px 70px 101px 70px;
-  max-width: 1280px;
+  padding: 110px 70px 100px 70px;
+  max-width: 1140px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -20,8 +20,8 @@
 .aboutMe__title {
   font-family: 'Inter';
   font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 22px;
+  line-height: 27px;
   margin: 0;
   padding-bottom: 23px;
 }
@@ -41,16 +41,15 @@
   font-size: 18px;
   line-height: 20px;
   margin: 0;
-  padding-bottom: 23px;
+  padding-bottom: 26px;
 }
 
 .aboutMe__text {
   font-family: 'Inter';
   font-weight: 400;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 22px;
   margin: 0;
-  padding-top: 3px;
   max-width: 600px;
   padding-right: 49px;
 }
@@ -65,7 +64,7 @@
 .aboutMe__text-block {
   display: flex;
   flex-direction: row;
-  padding-top: 70px;
+  padding-top: 66px;
   border-top: 1px solid black;
   justify-content: space-between;
 }

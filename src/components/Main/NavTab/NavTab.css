@@ -1,7 +1,7 @@
 @import url(../../../vendor/fonts.css);
 
 .NavTab__content {
-  background-color: black;
+  background-color: rgb(255, 255, 255);
 }
 
 .navTab__block {
@@ -9,10 +9,12 @@
   flex-direction: row;
   align-items: center;
   margin: 0 auto;
-  min-height: 66px;
   padding: 0px;
-  max-width: 276px;
+  gap: 10px;
   justify-content: space-between;
+  min-height: 36px;
+  background-color: #F5F5F5;
+  padding-bottom: 30px;
 }
 
 .navTab__link-point {
@@ -27,9 +29,11 @@
 
 .navTab__link {
   text-decoration: none;
-  text-decoration-line: underline;
-  color: white;
+  color: rgb(0, 0, 0);
+  background-color: #E8E8E8;
   margin: 0;
+  border-radius: 10px;
+  padding: 10px 17px;
 }
 
 .navTab__link:hover {

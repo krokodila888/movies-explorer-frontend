@@ -57,12 +57,11 @@
   
 .searchForm__input {
   border-style: none;
-  max-width: 932px;
-  height: 48px;
-  border: solid 1px #E8E8E8;
-  border-radius: 30px;
+  background: #F4F4F4;
+  border-radius: 9px;
+  max-width: 1140px;
+  height: 72px;
   z-index: 1;
-  padding-left: 22px;
   grid-row: 1 / 1;
   grid-column: 1 / 1;
 }
