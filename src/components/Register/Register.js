@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
-import logo from '../../images/logo-smile.svg';
+import logo from '../../images/logo_smile.svg';
 import './Register.css';
 
 function Register(props) {
@@ -33,13 +33,13 @@ function Register(props) {
           <form onSubmit={handleSubmit} className="register__form-container">
             <span className="register__text">Имя</span>
             <input className="register__input" id="userNameRegister" name="UserName" type="text" placeholder="Ваше имя" value={userName} onChange={e => setUserName(e.target.value)} />
-            <span className="register__text input-userNameRegister-error popup__input-error"> </span>
+            <span className="register__text input-userNameRegister-error register__input-error"> </span>
             <span className="register__text">E-mail</span>
             <input className="register__input" id="emailRegister" name="email" type="email" placeholder="E-mail" value={email} onChange={e => setEmail(e.target.value)} />
-            <span className="register__text input-emailRegister-error popup__input-error"> </span>
+            <span className="register__text input-emailRegister-error register__input-error"> </span>
             <span className="register__text">Пароль</span>
             <input className="register__input" id="passwordRegister" name="password" type="password" placeholder="Пароль" value={password} onChange={e => setPassword(e.target.value)} />
-            <span className="register__text input-emailLRegister-error popup__input-error"> </span>
+            <span className="register__text input-emailLRegister-error register__input-error"> </span>
             <button type="submit" onSubmit={handleSubmit} className="register__button">Зарегистрироваться</button>
           </form>
           <div className="register__link-container">

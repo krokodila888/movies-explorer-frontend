@@ -1,5 +1,4 @@
 import React from 'react';
-import backgroundLogo from '../../../images/main_pic.svg';
 import './Promo.css';
 import NavTab from '../NavTab/NavTab.jsx';
 
@@ -14,5 +13,3 @@ function Promo() {
 }  
 
 export default Promo; 
-
-//  <img alt="Project background" className="promo__background-logo" src={backgroundLogo} />

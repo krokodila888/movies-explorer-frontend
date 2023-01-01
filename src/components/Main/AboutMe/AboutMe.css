@@ -11,12 +11,6 @@
   margin-left: auto;
 }
 
-@media screen and (max-width: 770px) {
-  .aboutMe__content {
-    padding: 90px 50px 90px 50px;
-  }
-}
-
 .aboutMe__title {
   font-family: 'Inter';
   font-weight: 400;
@@ -91,6 +85,12 @@
 }
 
 @media screen and (max-width: 770px) {
+  .aboutMe__content {
+    padding: 90px 50px 90px 50px;
+  }
+}
+
+@media screen and (max-width: 770px) {
   .aboutMe__photo {
     width: 255px;
     height: 307px;
@@ -99,16 +99,25 @@
 
 @media screen and (max-width: 770px) {
   .aboutMe__text {
-    font-size: 12px;
-    line-height: 18px;
+    font-size: 14px;
+    line-height: 22px;
+    max-width: 364px;
   }
 }
 
 @media screen and (max-width: 770px) {
   .aboutMe__text {
-    font-size: 12px;
-    line-height: 18px;
+    font-size: 14px;
+    line-height: 22px;
     max-width: 364px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .aboutMe__status-text {
+    font-size: 14px;
+    line-height: 22px;
+    padding-bottom: 20px;
   }
 }
 
@@ -116,6 +125,7 @@
   .aboutMe__name-text {
     font-size: 40px;
     line-height: 40px;
+    padding-bottom: 16px;
   }
 }
 
@@ -130,6 +140,8 @@
   .aboutMe__photo {
     padding-bottom: 40px;
     align-self: center;
+    width: 292px;
+    height: 352px;
   }
 }
 
@@ -144,6 +156,30 @@
     padding-right: 0;
     font-size: 11px;
     line-height: 16px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .aboutMe__status-text {
+    font-size: 11px;
+    line-height: 16px;
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .aboutMe__name-text {
+    font-size: 30px;
+    line-height: 36px;
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .aboutMe__title {
+    padding-bottom: 28px;
+    font-size: 18px;
+    line-height: 22px;
   }
 }
 

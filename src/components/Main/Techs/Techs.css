@@ -10,16 +10,10 @@
   display: flex;
   flex-direction: column;
   max-width: 1140px;
-  padding: 100px 70px 100px 70px;
+  padding: 100px 70px;
   position: relative;
   margin-left: auto;
   margin-right: auto;
-}
-
-@media screen and (max-width: 770px) {
-  .techs__content-inside {
-    padding: 90px 50px 90px 50px;
-  }
 }
 
 .techs__title {
@@ -81,14 +75,35 @@
   justify-content: center;
 }
 
-@media screen and (max-width: 768px) {
-  .techs__text {
-    font-size: 12px;
-    line-height: 15px;
+@media screen and (max-width: 770px) {
+  .techs__content-inside {
+    padding: 90px 50px;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 770px) {
+  .techs__title {
+    font-size: 18px;
+    line-height: 22px;
+    padding-bottom: 28px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .techs__main-title {
+    padding-bottom: 22px;
+    padding-top: 80px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .techs__text {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+@media screen and (max-width: 770px) {
   .techs__grid-line {
     grid-template-columns: repeat(auto-fit, minmax(10px, 84px));
     grid-template-rows: repeat(auto-fit, 57px);
@@ -101,5 +116,19 @@
     font-size: 30px;
     line-height: 36px;
     padding-top: 60px;
+    padding-bottom: 24px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .techs__content-inside {
+    padding: 70px 18px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .techs__text {
+    font-size: 11px;
+    line-height: 16px;
   }
 }

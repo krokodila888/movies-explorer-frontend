@@ -2,6 +2,8 @@
 
 .profile {
   position: relative;
+  background-color: #FAFAFA;
+  min-height: calc(100vh - 78px);
 }
 
 .profile__container {
@@ -13,7 +15,7 @@
   align-self: center;
   z-index: 2;
   max-width: 410px;
-  padding: 74px 0px 37px 0px;
+  padding: 74px 0px 70px 0px;
   box-sizing: border-box;
   margin: 0 auto;
 }
@@ -33,7 +35,7 @@
 
 .profile__text {
   font-family: 'Inter';
-  font-weight: 400;
+  font-weight: 500;
   font-size: 11px;
   line-height: 13px;
   color: #000000;
@@ -45,7 +47,7 @@
   font-weight: 400;
   font-size: 13px;
   line-height: 16px;
-  color: #A0A0A0;
+  color: #000000;
   margin: 0;
 }
 
@@ -60,9 +62,21 @@
   }
 }
 
+@media screen and (max-width: 770px) {
+  .profile__container {
+    padding: 236px 0px 40px 0px;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .profile__container {
     padding: 70px 30px 40px 30px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .profile__title {
+    padding-bottom: 96px;
   }
 }
 
@@ -89,6 +103,12 @@
   padding-top: 220px;
   gap: 16px;
   align-items: center;
+}
+
+@media screen and (max-width: 770px) {
+  .profile__link-container {
+    padding-top: 210px;
+  }
 }
 
 @media screen and (max-width: 500px) {

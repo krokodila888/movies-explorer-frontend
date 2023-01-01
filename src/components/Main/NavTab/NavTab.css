@@ -2,6 +2,8 @@
 
 .NavTab__content {
   background-color: rgb(255, 255, 255);
+  margin: 0 auto;
+  min-height: 66px;
 }
 
 .navTab__block {
@@ -13,6 +15,7 @@
   gap: 10px;
   justify-content: space-between;
   min-height: 36px;
+  min-width: 96px;
   background-color: #F5F5F5;
   padding-bottom: 30px;
 }
@@ -21,7 +24,7 @@
   list-style-type: none;
   font-family: 'Inter';
   font-weight: 500;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 16px;
   margin: 0;
   max-width: 276px;
@@ -34,6 +37,8 @@
   margin: 0;
   border-radius: 10px;
   padding: 10px 17px;
+  min-height: 36px;
+  min-width: 96px;
 }
 
 .navTab__link:hover {
@@ -44,13 +49,25 @@
 
 @media screen and (max-width: 500px) {
   .navTab__block {
-    max-width: 244px;
+    max-width: 258px;
+    gap: 6px;
+    justify-content: space-between;
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 500px) {
   .navTab__link-point {
-    font-size: 11px;
+    font-size: 10px;
     line-height: 16px;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .navTab__link {
+    font-size: 10px;
+    min-height: 26px;
+    min-width: 82px;
+    padding: 5px 15.5px;
+  }
+}
+

@@ -1,7 +1,7 @@
 import React, { /*useEffect, */useState } from "react";
 import { Link } from 'react-router-dom';
 import './Login.css';
-import logo from '../../images/logo-smile.svg';
+import logo from '../../images/logo_smile.svg';
 
 function Login (props) {
   const [password, setPassword] = useState('');
@@ -32,10 +32,10 @@ function Login (props) {
         <form onSubmit={handleSubmit} className="login__form-container">
           <span className="login__text">E-mail</span>
           <input required id="emailLogin" name="email" placeholder="E-mail" type="text" value={email} onChange={e => setEmail(e.target.value)} className="login__input"/>
-          <span className="login__text input-emailLogin-error popup__input-error"> </span>
+          <span className="login__text input-emailLogin-error login__input-error"> </span>
           <span className="login__text">Пароль</span>
           <input required id="passwordLogin" name="password" type="password" placeholder="Пароль" value={password} onChange={e => setPassword(e.target.value)} className="login__input" />
-          <span className="login__text input-passwordLogin-error popup__input-error"> </span>
+          <span className="login__text input-passwordLogin-error login__input-error"> </span>
           <button type="submit" className="login__button">Войти</button>
         </form>
         <div className="login__link-container">

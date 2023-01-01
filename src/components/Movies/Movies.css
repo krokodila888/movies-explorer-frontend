@@ -1,7 +1,6 @@
 @import url(../../vendor/fonts.css);
 
 .movies__component {
-  max-width: 1280px;
   margin: 0 auto;
   background-color: #FAFAFA;
 }

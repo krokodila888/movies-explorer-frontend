@@ -17,7 +17,7 @@ function AboutProject() {
         </div>
       </div>
       <div className="aboutProject__grid-line">
-        <p className="aboutProject__text aboutProject__grid-text aboutProject__green-line">1 неделя</p>
+        <p className="aboutProject__text aboutProject__grid-text aboutProject__blue-line">1 неделя</p>
         <p className="aboutProject__text aboutProject__grid-text aboutProject__grey-line">4 недели</p>
         <p className="aboutProject__text aboutProject__grid-text">Back-end</p>
         <p className="aboutProject__text aboutProject__grid-text">Front-end</p>
