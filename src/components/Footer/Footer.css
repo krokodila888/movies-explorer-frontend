@@ -1,23 +1,4 @@
-@font-face {
-  src: url(../../vendor/Inter/Inter-Black.woff) format('woff'),
-    url(../../vendor/Inter/Inter-Black.woff2) format('woff2');
-  font-family: 'Inter';
-  font-weight: 900;
-}
-
-@font-face {
-  src: url(../../vendor/Inter/Inter-Regular.woff) format('woff'),
-    url(../../vendor/Inter/Inter-Regular.woff2) format('woff2');
-  font-family: 'Inter';
-  font-weight: 400;
-}
-
-@font-face {
-  src: url(../../vendor/Inter/Inter-Medium.woff) format('woff'),
-    url(../../vendor/Inter/Inter-Medium.woff2) format('woff2');
-  font-family: 'Inter';
-  font-weight: 500;
-}
+@import url(../../vendor/fonts.css);
 
 .footer__content {
   justify-items: center;
@@ -44,7 +25,7 @@
 }
 
 .footer__title {
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 13px;
   line-height: 16px;
@@ -56,7 +37,7 @@
 }
 
 .footer__text {
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
   margin: 0;
   font-size: 13px;

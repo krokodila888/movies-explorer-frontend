@@ -1,23 +1,4 @@
-@font-face {
-  src: url(../../vendor/Inter/Inter-Black.woff) format('woff'),
-    url(../../vendor/Inter/Inter-Black.woff2) format('woff2');
-  font-family: 'Inter';
-  font-weight: 900;
-}
-
-@font-face {
-  src: url(../../vendor/Inter/Inter-Regular.woff) format('woff'),
-    url(../../vendor/Inter/Inter-Regular.woff2) format('woff2');
-  font-family: 'Inter';
-  font-weight: 400;
-}
-
-@font-face {
-  src: url(../../vendor/Inter/Inter-Medium.woff) format('woff'),
-    url(../../vendor/Inter/Inter-Medium.woff2) format('woff2');
-  font-family: 'Inter';
-  font-weight: 500;
-}
+@import url(../../vendor/fonts.css);
 
 .login__backdround {
   display: flex;
@@ -62,7 +43,7 @@
   border: none;
   border-bottom: 1px solid #E8E8E8;
   color: #000000;
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
@@ -101,7 +82,7 @@
 }
 
 .login__title {
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
   font-weight: 500;
   font-size: 24px;
   line-height: 29px;
@@ -121,7 +102,7 @@
 }
 
 .login__text {
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 10px;
   line-height: 12px;
@@ -139,12 +120,13 @@
 }
 
 .login__underbottom-text {
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
   color: #A0A0A0;
   margin: 0;
+  padding-bottom: 70px;
 }
 
 
@@ -170,6 +152,12 @@
 @media screen and (max-width: 770px) {
   .login__container {
     padding-top: 232px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .login__underbottom-text {
+    padding-bottom: 232px;
   }
 }
 
@@ -221,5 +209,6 @@
   .login__underbottom-text {
     font-size: 12px;
     line-height: 15px;
+    padding-bottom: 30px;
   }
 }

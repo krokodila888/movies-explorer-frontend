@@ -18,7 +18,7 @@ function Register(props) {
   
   return (
     <>
-      <div className='register__background'>
+      <section className='register__background'>
         <div className="register__container">
           <Link to="/">
             <img
@@ -47,7 +47,7 @@ function Register(props) {
             <Link to="/sign-in" className="register__underbottom-text register__link">Войти</Link>
           </div>
         </div>  
-      </div>
+      </section>
     </>
   );
 }

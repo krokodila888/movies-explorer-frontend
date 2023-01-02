@@ -10,7 +10,7 @@ function Profile (props) {
   return(
     <>
       <HeaderLogin/>
-      <div className="profile">
+      <section className="profile">
         <div className="profile__container">
           <p className="profile__title">
             Привет, {currentUser.userName}!
@@ -28,7 +28,7 @@ function Profile (props) {
             <Link to="/" className="profile__underbottom-text profile__link">Выйти из аккаунта</Link>
           </div>
         </div> 
-      </div>
+      </section>
     </>
   )
 }

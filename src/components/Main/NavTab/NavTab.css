@@ -22,7 +22,7 @@
 
 .navTab__link-point {
   list-style-type: none;
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
   font-weight: 500;
   font-size: 12px;
   line-height: 16px;

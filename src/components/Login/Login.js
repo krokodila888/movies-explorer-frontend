@@ -17,7 +17,7 @@ function Login (props) {
     }
   
   return(
-    <div className="login__background">
+    <section className="login__background">
       <div className="login__container">
         <Link to="/">
           <img
@@ -43,7 +43,7 @@ function Login (props) {
           <Link to="/sign-up" className="login__underbottom-text login__link">Регистрация</Link>
         </div>
       </div>  
-    </div>
+    </section>
   )
 }
 

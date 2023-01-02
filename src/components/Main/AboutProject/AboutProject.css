@@ -11,14 +11,8 @@
   margin-right: auto;
 }
 
-@media screen and (max-width: 770px) {
-  .aboutProject__content {
-    padding: 90px 50px 90px 50px;
-  }
-}
-
 .aboutProject__main-title {
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 22px;
   line-height: 27px;
@@ -27,7 +21,7 @@
 }
 
 .aboutProject__title {
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
@@ -35,25 +29,12 @@
   padding-bottom: 22px;
 }
 
-@media screen and (max-width: 770px) {
-  .aboutProject__title {
-    padding-bottom: 16px;
-  }
-}
-
 .aboutProject__text {
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
   margin: 0;
-}
-
-@media screen and (max-width: 770px) {
-  .aboutProject__text {
-    font-size: 12px;
-    line-height: 18px;
-  }
 }
 
 .aboutProject__grid-text {
@@ -62,20 +43,14 @@
   padding: 9px 0 9px 0;
 }
 
-@media screen and (max-width: 650px) {
-  .aboutProject__grid-text {
-    font-size: 11px;
-    line-height: 13px;
-    padding: 11px 0 11px 0;
-  }
-}
-
 .aboutProject__grid-text:nth-child(3) {
   padding: 14px 0 0 0;
+  color: #A0A0A0;
 }
 
 .aboutProject__grid-text:nth-child(4) {
   padding: 14px 0 0 0;
+  color: #A0A0A0;
 }
 
 .aboutProject__column {
@@ -94,8 +69,7 @@
 }
 
 .aboutProject__grid-line {
-  /*min-height: calc(100vh - 72px);*/
-  max-width: 1140;
+  min-width: 1140px;
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: repeat(2, 36px);
@@ -105,12 +79,52 @@
   align-self: center;
 }
 
+@media screen and (max-width: 1280px) {
+  .aboutProject__grid-line  {
+    min-width: calc(100vw - 140px);
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .aboutProject__grid-line  {
+    grid-template-columns: 140px 528px;
+  }
+}
+
 .aboutProject__blue-line {
   background-color: #3456F3;
+  color: white;
 }
 
 .aboutProject__grey-line {
   background-color: #F2F2F2;
+}
+
+@media screen and (max-width: 770px) {
+  .aboutProject__content {
+    padding: 90px 50px 90px 50px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .aboutProject__title {
+    padding-bottom: 16px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .aboutProject__text {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .aboutProject__grid-text {
+    font-size: 11px;
+    line-height: 13px;
+    padding: 11px 0 11px 0;
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -155,4 +169,3 @@
     max-width: calc(100vw - 36px);
   }
 }
-
