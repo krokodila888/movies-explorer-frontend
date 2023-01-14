@@ -1,19 +1,27 @@
-import React, { useState } from "react";
-import poster from '../../../images/poster.jpg';
+import React from "react";
 import './SavedMoviesCard.css';
 
-function SavedMoviesCard() {
+function SavedMoviesCard(props) {
+
+  const {savedMovie, onMovieDelete} = props;
+  const {nameRU, duration, image, trailerLink} = savedMovie;
+
+  function handleDeleteClick(savedMovie) {
+    onMovieDelete(savedMovie._id);
+  } 
 
   return (
     <li className="savedMoviesCard__card">
-      <div className="savedMoviesCard__title-container">
-        <div className="savedMoviesCard__text-container">
-          <h3 className="savedMoviesCard__title">Бег это свобода</h3>
-          <p className="savedMoviesCard__duration">1ч 42м</p>
+      <a href={trailerLink} target="_blank" className="savedMoviesCard__link">
+        <div className="savedMoviesCard__title-container">
+          <div className="savedMoviesCard__text-container">
+            <h3 className="savedMoviesCard__title">{nameRU}</h3>
+            <p className="savedMoviesCard__duration">{(`${Math.trunc(duration / 60)}ч ${duration % 60}м`)}</p>
+          </div>
         </div>
-        <button type="button" aria-label="delete" className="savedMoviesCard__del-button"></button>
-      </div>
-      <img src={poster} alt="Кадр из фильма" className="savedMoviesCard__image" />
+        <img src={image} alt="Кадр из фильма" className="savedMoviesCard__image"></img>
+      </a>
+      <button onClick={() => handleDeleteClick(savedMovie)} type="button" aria-label="delete" className="savedMoviesCard__del-button"></button>
     </li>
   )
 }

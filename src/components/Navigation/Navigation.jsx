@@ -1,4 +1,4 @@
-import account from '../../images/icon-account.svg';
+// import account from '../../images/icon-account.svg';
 import { NavLink } from 'react-router-dom';
 import './Navigation.css';
 

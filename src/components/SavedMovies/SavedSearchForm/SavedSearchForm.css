@@ -1,4 +1,4 @@
-.searchForm {
+.savedSearchForm {
   display: flex;
   flex-direction: column;
   padding: 70px 70px 10px 70px;
@@ -9,24 +9,24 @@
 }
 
 @media screen and (max-width: 1200px) {
-  .searchForm {
+  .savedSearchForm {
     padding: 60px 30px 0px 30px;
   }
 }
 
 @media screen and (max-width: 770px) {
-  .searchForm {
+  .savedSearchForm {
     padding: 80px 30px 10px 30px;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .searchForm {
+  .savedSearchForm {
     padding: 60px 10px 0px 10px;
   }
 }
 
-.searchForm__form {
+.savedSearchForm__form {
   max-width: 1140x;
   display: grid;
   grid-template-columns: 1fr;
@@ -38,21 +38,21 @@
 }
 
 @media screen and (max-width: 770px) {
-  .searchForm__form {
+  .savedSearchForm__form {
     grid-template-columns: auto;
     padding-bottom: 109px;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .searchForm__form {
+  .savedSearchForm__form {
     grid-template-columns: auto;
     grid-template-rows: 72px 65px;
     padding-bottom: 44px;
   }
 }
 
-.searchForm__input-container {
+.savedSearchForm__input-container {
   grid-column: 1/1;
   grid-row: 1/1;
   flex-direction: row;
@@ -63,7 +63,7 @@
   max-width: 1077px;
 }
 
-.searchForm__input {
+.savedSearchForm__input {
   border-style: none;
   background: #F4F4F4;
   border-radius: 9px;
@@ -76,30 +76,30 @@
   padding: 0 0 0 53px;
 }
 
-.searchForm__input:focus-visible {
+.savedSearchForm__input:focus-visible {
   outline: #E6E6E6 auto 0px;
 }
 
 @media screen and (max-width: 1140px) {
-  .searchForm__input {
+  .savedSearchForm__input {
     min-width: calc(100vw - 193px);
   }
 }
 
 @media screen and (max-width: 770px) {
-  .searchForm__input {
+  .savedSearchForm__input {
     min-width: calc(100vw - 113px);
   }
 }
 
 @media screen and (max-width: 500px) {
-  .searchForm__input {
+  .savedSearchForm__input {
     padding: 0 0 0 19px;
     min-width: calc(100vw - 39px);
   }
 }
 
-.searchForm__find-button {
+.savedSearchForm__find-button {
   width: 64px;
   height: 34px;
   background-image: url(../../../images/arrow-find.svg);
@@ -123,20 +123,20 @@
 }
 
 @media screen and (max-width: 770px) {
-  .searchForm__find-button {
+  .savedSearchForm__find-button {
     margin-right: 187px;
     width: 53px;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .searchForm__find-button {
+  .savedSearchForm__find-button {
     margin-right: 18px;
     border-right: none;
   }
 }
 
-.searchForm__invisible-checkbox {
+.savedSearchForm__invisible-checkbox {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -146,13 +146,13 @@
 	display: block;
 }
 
-.searchForm__find-button:hover {
+.savedSearchForm__find-button:hover {
   opacity: 0.5;
   cursor: pointer;
   transition: 1s;
 }
 
-.searchForm__tumb-container {
+.savedSearchForm__tumb-container {
 	display: flex;
   align-items: center;
   justify-content: center;
@@ -168,13 +168,13 @@
 }
 
 @media screen and (max-width: 770px) {
-  .searchForm__tumb-container {
+  .savedSearchForm__tumb-container {
     margin-right: 20px;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .searchForm__tumb-container {
+  .savedSearchForm__tumb-container {
     grid-row: 2/2;
     align-self: end;
     justify-self: center;
@@ -182,7 +182,7 @@
   }
 }
 
-.searchForm__visible-checkbox {
+.savedSearchForm__visible-checkbox {
   background-image: url(../../../images/smalltumb.svg);
   height: 20px;
   z-index: 3;
@@ -193,7 +193,7 @@
   text-align: end;
 }
 
-.searchForm__visible-checkbox1 {
+.savedSearchForm__visible-checkbox1 {
   background-image: url(../../../images/smalltumboff.svg);
   height: 20px;
   z-index: 3;
@@ -205,25 +205,25 @@
 }
 
 @media screen and (max-width: 770px) {
-  .searchForm__visible-checkbox {
+  .savedSearchForm__visible-checkbox {
     width: 148px;
   }
 }
 
 @media screen and (max-width: 770px) {
-  .searchForm__visible-checkbox1 {
+  .savedSearchForm__visible-checkbox1 {
     width: 148px;
     top: 0;
   }
 }
 
-.searchForm__visible-checkbox:hover {
+.savedSearchForm__visible-checkbox:hover {
   opacity: 0.5;
   cursor: pointer;
   transition: 1s;
 }
 
-.searchForm__text {
+.savedSearchForm__text {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 13px;
@@ -232,12 +232,12 @@
 }
 
 @media screen and (max-width: 770px) {
-  .searchForm__text {
+  .savedSearchForm__text {
     font-size: 11px;
   }
 }
 
-.searchForm__img {
+.savedSearchForm__img {
   color: #C4C4C4;
   height: 34px;
   width: 34px;
@@ -251,7 +251,7 @@
 }
 
 @media screen and (max-width: 500px) {
-  .searchForm__img {
+  .savedSearchForm__img {
     display: none;
   }
 }
