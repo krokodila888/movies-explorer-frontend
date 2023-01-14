@@ -7,6 +7,7 @@
   padding-top: 70px;
   align-items: center;
   padding: 70px 70px 80px 70px;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 770px) {
@@ -82,3 +83,12 @@ input[type="checkbox"] + span {
   background: url(../../../images/smalltumb.svg) no-repeat;
   cursor: pointer;
  }
+
+.savedMoviesCardList__text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  margin: 0;
+}

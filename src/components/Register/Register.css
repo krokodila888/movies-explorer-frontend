@@ -33,10 +33,14 @@
   align-self: center;
 }
 
-.register__button:hover {
+.register__button-disabled {
+  background: #98a8ec;
+}
+
+.register__button-active:hover {
   opacity: 0.5;
   cursor: pointer;
-  transition: 1s;
+  transition: 0.5s;
 }
 
 .register__input {
@@ -114,6 +118,7 @@
 
 .register__input-error {
   margin-bottom: 14px;
+  color: #FF004D;
 }
 
 .register__input-error:last-of-type {
@@ -183,6 +188,13 @@
   }
 }
 
+.register__input :-webkit-autofill,
+.register__input :-webkit-autofill:hover,
+.register__input :-webkit-autofill:focus,
+.register__input :-webkit-autofill:active{
+  -webkit-box-shadow: 0 0 0 30px #FAFAFA inset !important;
+}
+
 @media screen and (max-width: 770px) {
   .register__button {
     margin-top: 169px;
@@ -210,5 +222,22 @@
     font-size: 12px;
     line-height: 15px;
     padding-bottom: 30px;
+  }
+}
+
+.register__text-error {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #A0A0A0;
+  margin: 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  .register__text-error {
+    font-size: 12px;
+    line-height: 15px;
   }
 }
