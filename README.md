@@ -10,6 +10,6 @@ Backend искать тут: https://movies-for-study.online
 
 Frontend: https://api.movies-for-study.online
 
-Тут будет пулреквест: 
+Пулреквест: https://github.com/krokodila888/movies-explorer-frontend/pull/2
 
 Пусть все получится!!
