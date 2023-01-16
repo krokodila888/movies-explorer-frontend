@@ -1,0 +1,235 @@
+ @import url(../../vendor/fonts.css);
+
+.profile {
+  position: relative;
+  background-color: #FAFAFA;
+  min-height: calc(100vh - 78px);
+}
+
+.profile__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  flex-basis: auto;
+  align-self: center;
+  z-index: 2;
+  max-width: 410px;
+  padding: 74px 0px 70px 0px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  position: relative;
+}
+
+.profile__title {
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  margin: 0;
+  color: rgb(0, 0, 0);
+  margin: 0;
+  padding-bottom: 107px;
+  text-align: center;
+  align-self: center;
+} 
+
+.profile__text {
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 13px;
+  color: #000000;
+  margin: 0;
+}
+
+.profile__underbottom-text {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: #000000;
+  margin: 0;
+}
+
+.profile__underbottom-text:last-child {
+  color: #FF004D;
+}
+
+@media screen and (max-width: 500px) {
+  .profile__underbottom-text {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .profile__container {
+    padding: 236px 0px 40px 0px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .profile__container {
+    padding: 70px 30px 40px 30px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .profile__title {
+    padding-bottom: 80px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .profile__title {
+    padding-bottom: 64px;
+  }
+}
+
+.profile__link {
+  text-decoration: none;
+  border: none;
+}
+
+.profile__link-disabled {
+  text-decoration: none;
+  border: none;
+  color: #A0A0A0;
+  background-color: #FAFAFA;
+}
+
+.profile__link:hover {
+  opacity: 0.4;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.profile__link-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 220px;
+  gap: 16px;
+  align-items: center;
+}
+
+.profile__link:first-child {
+  border: none;
+  background-color: #FAFAFA;
+}
+
+@media screen and (max-width: 770px) {
+  .profile__link-container {
+    padding-top: 210px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .profile__link-container {
+    padding-top: 379px;
+  }
+}
+
+.profile__row-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: none;
+  background-color: #FAFAFA;
+  height: 14px;
+  position: relative;
+}
+
+.profile__row-container:nth-child(3) {
+  padding-top: 16px;
+}
+
+.profile__row-container:nth-child(6) {
+  border-bottom: none;
+  border-top: 1px solid #E6E6E6;
+  padding-top: 16px;
+}
+
+.profile__row-container:-webkit-autofill,
+.profile__row-container:-webkit-autofill:hover,
+.profile__row-container:-webkit-autofill:focus,
+.profile__row-container:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #FAFAFA inset !important;
+}
+
+.profile__row-container:focus-visible {
+  outline: #E6E6E6 auto 0px;
+}
+
+.profile__input-error {
+  min-height: 16px;
+  color: #FF004D;
+}
+
+.profile__row-container::-webkit-input-placeholder {
+  color: black;
+}
+
+.profile__row-container:focus {
+  border: none;
+}
+
+.profile__span-userName-text {
+  text-align: end;
+  position: absolute;
+  top: 228px;
+  right: 0;
+  z-index: 2;
+}
+
+.profile__span-email-text {
+  text-align: end;
+  position: absolute;
+  top: 276px;
+  right: 0;
+  z-index: 2;
+}
+
+@media screen and (max-width: 770px) {
+  .profile__span-userName-text {
+    top: 363px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .profile__span-email-text {
+    top: 411px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .profile__span-userName-text {
+    top: 181px;
+    right: 30px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .profile__span-email-text {
+    top: 228px;
+    right: 30px;
+  }
+}
+
+.profile__text-error {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #A0A0A0;
+  margin: 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  .profile__text-error {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}

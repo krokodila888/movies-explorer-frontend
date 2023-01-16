@@ -1,0 +1,75 @@
+@import url(../../../vendor/fonts.css);
+
+.promo__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #F5F5F5;
+  position: relative;
+  min-height: 513px;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 1240px) {
+  .promo__content {
+    margin: 20px 20px 0 20px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .promo__content {
+    margin: 14px 14px 0 14px;
+  }
+}
+  
+.promo__background-logo {
+  width: 320px;
+  height: 320px;
+  margin-top: 156px;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  z-index: 1;
+  color: #FFFFFF;
+  opacity: 0.2;
+}
+
+.promo__title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 58px;
+  text-align: center;
+  color: black;
+  z-index: 2;
+  max-width: 730px;
+  margin: 0;
+  padding: 184px 0px 224px 0px;
+}
+
+@media screen and (max-width: 770px) {
+  .promo__title {
+    font-size: 40px;
+    line-height: 52px;
+    padding: 350px 0px 314px 0px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .promo__title {
+    font-size: 29px;
+    line-height: 37px;
+    padding: 220px 14px 312px 14px;
+    max-width: 292px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+  .promo__background-logo {
+    width: 248px;
+    height: 248px;
+    }
+}
