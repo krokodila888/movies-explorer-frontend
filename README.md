@@ -4,10 +4,12 @@
 
 ### https://disk.yandex.ru/d/NZiG5nX75f0R8g
 
-Backend искать тут: https://movies-for-study.nomoredomains.club 
+Backend искать тут: https://movies-for-study.online 
 
-Публичный IPv4: 51.250.101.24
+Публичный IPv4: 158.160.54.105
 
-Frontend: https://api.movies-for-study.nomoredomains.club
+Frontend: https://api.movies-for-study.online
+
+Тут будет пулреквест: 
 
 Пусть все получится!!
