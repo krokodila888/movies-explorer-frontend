@@ -14,17 +14,16 @@ export class MainApi {
   }
 
   getProfileInfo() {
-    this._profileInfo = fetch(`${this._bazeUrl}/users/me`, {
+    return fetch(`${this._bazeUrl}/users/me`, {
       headers: {
         'Content-Type': 'application/json'
       },
       credentials: 'include'
-    }).then(this._handleResult);
-    return this._profileInfo;
+    }).then(this._handleResult)
   }
 
   editUserInfo({ name, email }) {
-    this._newProfile = fetch(`${this._bazeUrl}/users/me`, {
+    return fetch(`${this._bazeUrl}/users/me`, {
       method: 'PATCH',
       credentials: 'include',
       headers: {
@@ -34,22 +33,20 @@ export class MainApi {
         name: name,
         email: email
       })
-    }).then(this._handleResult);
-    return this._newProfile;
+    }).then(this._handleResult)
   }
 
   getSavedMovies() {
-    this._savedMovies = fetch(`${this._bazeUrl}/movies`, {
+    return fetch(`${this._bazeUrl}/movies`, {
       headers: {
         'Content-Type': 'application/json'
       },
       credentials: 'include',
-    }).then(this._handleResult);
-    return this._savedMovies;
+    }).then(this._handleResult)
   }
 
   addNewMovie({ country, director, duration, year, description, image, trailerLink, thumbnail, id, nameRU, nameEN }) {
-    this._newMovie = fetch(`${this._bazeUrl}/movies`, {
+    return fetch(`${this._bazeUrl}/movies`, {
       method: 'POST',
       credentials: 'include',
       headers: {
@@ -68,56 +65,17 @@ export class MainApi {
         nameRU: nameRU, 
         nameEN: nameEN
       })
-      }).then(this._handleResult);
-      return this._newMovie;  
+      }).then(this._handleResult)
   }
 
   removeMovie(movieID) {
-    this._removedMovie = fetch(`${this._bazeUrl}/movies/${movieID}`, {
+    return fetch(`${this._bazeUrl}/movies/${movieID}`, {
       method: 'DELETE',
       credentials: 'include',
       headers: {
         'Content-Type': 'application/json'
       }
-    }).then(this._handleResult);
-    return this._removedMovie;
-  }
-
-  dislikeCard(cardID) {
-    this._dislike = fetch(`${this._bazeUrl}/cards/${cardID}/likes`, {
-      method: 'DELETE',
-      credentials: 'include',
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    }).then(this._handleResult);
-    return this._dislike;
-  }
-
-  changeLikeCardStatus(cardID, isLiked) {
-    if (!isLiked) return (mainApi.likeCard(cardID));
-    if (isLiked) return (mainApi.dislikeCard(cardID));
-  }
-
-  changeAvatar(data) {
-    this._changedAvatar = fetch(`${this._bazeUrl}/users/me/avatar`, {
-      method: 'PATCH',
-      credentials: 'include',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({avatar: data})
-    }).then(this._handleResult);
-    return this._changedAvatar
-  }
-
-  signout() {
-    return fetch(`${this._bazeUrl}/signout`, {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      credentials: 'include',
-    }).then(this._handleResponse);
+    }).then(this._handleResult)
   }
 
   signIn(data) {

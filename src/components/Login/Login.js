@@ -10,8 +10,6 @@ function Login (props) {
   const emailInput = document.getElementById('emailLogin');
   const passwordInput = document.getElementById('passwordLogin');  
   const submitButton = document.getElementById('buttonLogin')
-  /*const [isEmailValid, setIsEmailValid] = useState(true);  
-  const [isPasswordValid, setIsPasswordValid] = useState(true);*/
   const emailErrorSpan = document.getElementById('emailSpanLogin')
   const passwordErrorSpan = document.getElementById('passwordSpanLogin')
  
@@ -43,10 +41,12 @@ function Login (props) {
           />
         </Link>
         <p className="login__title">
-        Рады видеть!
+          Рады видеть!
         </p>
         <form onSubmit={handleSubmit} className="login__form-container">
-          <span className="login__text">E-mail</span>
+          <span className="login__text">
+            E-mail
+          </span>
           <input 
             formNoValidate
             required 
@@ -58,11 +58,16 @@ function Login (props) {
             onChange={e => {
               setEmail(e.target.value);
               validate();
-              if (emailInput) return (emailErrorSpan.textContent = emailInput.validationMessage);
-              /*if (emailInput && emailInput.validity.valid) return setIsEmailValid(true); else return setIsEmailValid(false)*/}}
+              if (emailInput) 
+                return (emailErrorSpan.textContent = emailInput.validationMessage);}}
             className="login__input"/>
-          <span className="login__text input-emailLogin-error login__input-error" id='emailSpanLogin'> </span>
-          <span className="login__text">Пароль</span>
+          <span 
+            className="login__text input-emailLogin-error login__input-error" 
+            id='emailSpanLogin'> 
+          </span>
+          <span className="login__text">
+            Пароль
+          </span>
           <input 
             formNoValidate
             required 
@@ -74,22 +79,36 @@ function Login (props) {
             onChange={e => {
               setPassword(e.target.value);
               validate();
-              if(passwordInput) return (passwordErrorSpan.textContent = passwordInput.validationMessage);
-              /*if (passwordInput && passwordInput.validity.valid) return setIsPasswordValid(true); 
-            else return setIsPasswordValid(false)*/}}
+              if (passwordInput) 
+                return (passwordErrorSpan.textContent = passwordInput.validationMessage);
+            }}
             className="login__input" />
-          <span className="login__text input-passwordLogin-error login__input-error" id='passwordSpanLogin'> </span>
-          {userErrorMessage !== '' && <p className="login__text-error">{userErrorMessage}</p>
-        }
+          <span 
+            className="login__text input-passwordLogin-error login__input-error" 
+            id='passwordSpanLogin'> 
+          </span>
+          {userErrorMessage !== '' && 
+            <p className="login__text-error">
+              {userErrorMessage}
+            </p>
+          }
           <button 
             type="submit"
             id="buttonLogin"
             disabled
-            className=/*{(isEmailValid && isPasswordValid) ? "login__button login__button-active" : "login__button login__button-disabled"}*/"login__button login__button-active">Войти</button>
+            className="login__button login__button-active">
+              Войти
+          </button>
         </form>
         <div className="login__link-container">
-          <p className="login__underbottom-text">Ещё не зарегистрированы?</p>
-          <Link to="/sign-up" className="login__underbottom-text login__link">Регистрация</Link>
+          <p className="login__underbottom-text">
+            Ещё не зарегистрированы?
+          </p>
+          <Link 
+            to="/sign-up" 
+            className="login__underbottom-text login__link">
+              Регистрация
+          </Link>
         </div>
       </div>  
     </section>

@@ -14,12 +14,11 @@ export class MoviesApi {
   }
 
   getAllMovies() {
-    this._movies = fetch(this._moviesUrl, {
+    return fetch(this._moviesUrl, {
       headers: {
         'Content-Type': 'application/json'
       },
-    }).then(this._handleResult);
-    return this._movies;
+    }).then(this._handleResult)
   }
 }
 

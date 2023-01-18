@@ -8,10 +8,21 @@ import Footer from '../Footer/Footer.jsx';
 
 function SavedMovies(props) {
 
-  const {savedMovies, isLoading, searchInSaved, onMovieDelete, makeNewSearchInSaved, filteredSavedMovies, setEmptySearch, savedMoviesErrorMessage} = props;
+  const {
+    savedMovies, 
+    setFilteredSavedMovies, 
+    isLoading, 
+    searchInSaved, 
+    setIsCheckedForSaved, 
+    isCheckedForSaved, 
+    onMovieDelete, 
+    makeNewSearchInSaved, 
+    filteredSavedMovies, 
+    savedMoviesErrorMessage
+  } = props;
 
   useEffect(() => {
-    setEmptySearch()
+    setFilteredSavedMovies([]);
   }, [])
 
   return (
@@ -19,8 +30,8 @@ function SavedMovies(props) {
       <HeaderLogin/>
       <SavedSearchForm 
         makeNewSearchInSaved={makeNewSearchInSaved} 
-        savedMovies={savedMovies} 
-        filteredSavedMovies={filteredSavedMovies} 
+        isCheckedForSaved={isCheckedForSaved}
+        setIsCheckedForSaved={setIsCheckedForSaved} 
       />
       <Preloader 
         isLoading={isLoading}
@@ -31,6 +42,7 @@ function SavedMovies(props) {
         onMovieDelete={onMovieDelete} 
         filteredSavedMovies={filteredSavedMovies} 
         savedMoviesErrorMessage={savedMoviesErrorMessage}
+        isCheckedForSaved={isCheckedForSaved}
       />
       <Footer />
     </section>

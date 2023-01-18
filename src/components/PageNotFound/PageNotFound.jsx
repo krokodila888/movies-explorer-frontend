@@ -14,9 +14,13 @@ function PageNotFound () {
     <section className="pageNotFound">
       <h3 className="pageNotFound__title">404</h3>
       <p className="pageNotFound__text">
-       Страница не найдена
+        Страница не найдена
       </p>
-      <p className="pageNotFound__text pageNotFound__link" onClick={goBack} >Назад</p>
+      <p 
+        className="pageNotFound__text pageNotFound__link" 
+        onClick={goBack} >
+          Назад
+      </p>
     </section>
   )
 }

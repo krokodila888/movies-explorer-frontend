@@ -32,7 +32,7 @@ function App() {
   const navigate = useNavigate();
   const [currentUser, setCurrentUser] = useState({});
   const [isChecked, setIsChecked] = useState(false);
-  const [isCheckedForSaved, setIsCheckedForSaved] = useState(false);
+  const [isCheckedForSaved, setIsCheckedForSaved] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
 
   // проверка токена
@@ -47,11 +47,6 @@ function App() {
       setLoggedIn(false);
       console.log(err)
     })
-  }
-
-  // тут пустой поиск
-  function setEmptySearch() {
-    setSearchInSaved("")
   }
 
   // получить сохраненные фильмы
@@ -90,11 +85,11 @@ function App() {
         handleLoginUser(email, password)        
       }
     })
-      .catch((err) => {
-        console.log(err);
-        if ((err) && err.includes(409)) setUserErrorMessage(ERROR_MESSAGE.SAME_EMAIL);
-        else setUserErrorMessage(ERROR_MESSAGE.SIGNUP_ERROR)
-      })
+    .catch((err) => {
+      console.log(err);
+      if ((err) && err.includes(409)) setUserErrorMessage(ERROR_MESSAGE.SAME_EMAIL);
+      else setUserErrorMessage(ERROR_MESSAGE.SIGNUP_ERROR)
+    })
   }
 
   function setUserData(data) {
@@ -106,6 +101,12 @@ function App() {
     mainApi.getProfileInfo()
     .then((res) => {
       setUserData(res.data);
+    })
+    .catch((err) => {
+      console.log(err);
+      if ((err) && 
+      err.includes(401)) 
+        setUserErrorMessage(ERROR_MESSAGE.AUTH_ERROR)
     })
   }
 
@@ -151,7 +152,10 @@ function App() {
           setIsCheckedForSaved(false);
           localStorage.clear();
           navigate('/')
-      })
+        })
+        .catch((err) => {
+          console.log(err);
+        })
     }
   }
 
@@ -178,7 +182,6 @@ function App() {
     })
     .then(() => {
       setSearch(data);
-      setIsChecked(isChecked1);
     })
     .catch((err) => {
       console.log(err);
@@ -186,16 +189,24 @@ function App() {
     .then(() => {
       setIsLoading(() => false)
     })
+    .catch((err) => {
+      console.log(err);
+      if ((err) && err.includes(401)) 
+      setUserErrorMessage(ERROR_MESSAGE.AUTH_ERROR)
+    })
   }
 
   useEffect(() => {
     localStorage.setItem('isChecked', isChecked); 
-    localStorage.setItem("search", search)
   }, [search, isChecked])
 
   useEffect(() => {
-    setFilteredMovies(movies.filter((item) => {if (isChecked) return ((item.nameRU.toLowerCase().includes(search.toLowerCase()) && (item.duration <= 41)) /*|| (item.nameEN.toLowerCase().includes(search.toLowerCase()) && (item.duration <= 41) )*/); else return (item.nameRU.toLowerCase().includes(search.toLowerCase()) /*|| item.nameEN.toLowerCase().includes(search.toLowerCase()) */)}))
-  }, [movies, search, isChecked])
+    setFilteredMovies(movies.filter((item) => {
+      return (
+        item.nameRU.toLowerCase().includes(search.toLowerCase())
+      )
+    }))
+  }, [movies, search])
   
 
   // поиск в сохраненных фильмах
@@ -216,12 +227,20 @@ function App() {
     .then(() => {
       setIsLoading(() => false)
     })
+    .catch((err) => {
+      console.log(err);
+      if ((err) && err.includes(401)) 
+      setUserErrorMessage(ERROR_MESSAGE.AUTH_ERROR)
+    })
   }
 
   useEffect(() => {
     setFilteredSavedMovies(savedMovies.filter((item) => {
-      if (!isCheckedForSaved) return (item.nameRU.toLowerCase().includes(searchInSaved.toLowerCase()) && (item.duration <= 41)) /*|| (item.nameEN.toLowerCase().includes(searchInSaved.toLowerCase()) && (item.duration <= 41))*/; else return (item.nameRU.toLowerCase().includes(searchInSaved.toLowerCase()) /*|| item.nameEN.toLowerCase().includes(searchInSaved.toLowerCase())*/) }))
-  }, [savedMovies, searchInSaved, isCheckedForSaved])
+        return (
+          item.nameRU.toLowerCase().includes(searchInSaved.toLowerCase()) 
+        ) 
+    }))
+  }, [savedMovies, searchInSaved])
 
   // добавить фильм в избранное
   function handleSaveMovie(movie) {
@@ -270,28 +289,44 @@ function App() {
   return (
     <>
       <div className="page">
-        <CurrentUserContext.Provider value={currentUser}>
+        <CurrentUserContext.Provider 
+          value={currentUser}>
           <Routes>
-            <Route exact path="/" element={
-              <Main loggedIn={loggedIn}/>
+            <Route 
+              exact path="/" 
+              element={
+                <Main 
+                  loggedIn={loggedIn}/>
               }>  
             </Route>
-            <Route path="/sign-in" element={<Login 
-              handleLogin={handleLogin} 
-              loginUser={handleLoginUser}
-              userErrorMessage={userErrorMessage}
-              setUserErrorMessage={setUserErrorMessage}
-              />}>
+            <Route 
+              path="/sign-in" 
+              element={
+                <Login 
+                  handleLogin={handleLogin} 
+                  loginUser={handleLoginUser}
+                  userErrorMessage={userErrorMessage}
+                  setUserErrorMessage={setUserErrorMessage}/>
+              }>
             </Route>
-            <Route path="/sign-up" element={<Register 
-              registerUser={handleRegisterUser}
-              userErrorMessage={userErrorMessage}
-              setUserErrorMessage={setUserErrorMessage}/>}>
+            <Route 
+              path="/sign-up" 
+              element={<Register 
+                registerUser={handleRegisterUser}
+                userErrorMessage={userErrorMessage}
+                setUserErrorMessage={setUserErrorMessage}/>}>
             </Route>
-            <Route path="*" element={<PageNotFound/>}>
+            <Route 
+              path="*" 
+              element={
+                <PageNotFound/>
+              }>
             </Route>
-            <Route exact path="/movies" element={
-              <ProtectedRoute loggedIn={loggedIn}>
+            <Route 
+              exact path="/movies" 
+              element={
+              <ProtectedRoute 
+                loggedIn={loggedIn}>
                 <Movies 
                   movies={movies}
                   savedMovies={savedMoviesToCompare}
@@ -312,8 +347,11 @@ function App() {
                   setUserErrorMessage={setUserErrorMessage} />
               </ProtectedRoute>}>      
             </Route>
-            <Route exact path="/saved-movies" element={
-              <ProtectedRoute loggedIn={loggedIn}>
+            <Route 
+              exact path="/saved-movies" 
+              element={
+              <ProtectedRoute 
+                loggedIn={loggedIn}>
                 <SavedMovies 
                   savedMovies={savedMovies}
                   isLoading={isLoading}
@@ -321,20 +359,25 @@ function App() {
                   onMovieDelete = {handleMovieDelete}
                   makeNewSearchInSaved = {makeNewSearchInSaved}
                   filteredSavedMovies = {filteredSavedMovies}
-                  setEmptySearch={setEmptySearch}
+                  isCheckedForSaved={isCheckedForSaved}
+                  setIsCheckedForSaved={setIsCheckedForSaved}
                   savedMoviesErrorMessage={savedMoviesErrorMessage}
+                  setFilteredSavedMovies={setFilteredSavedMovies}
                 />
               </ProtectedRoute>}>      
             </Route>
-            <Route exact path="/profile" element={
-              <ProtectedRoute loggedIn={loggedIn}>
-                <Profile 
-                  onUpdateUser={handleUpdateUser}
-                  exitProfile={handleLogOut}
-                  onCheckToken={handleCheckToken}
-                  userErrorMessage={userErrorMessage}
-                  setUserErrorMessage={setUserErrorMessage} />
-              </ProtectedRoute>}>      
+            <Route 
+              exact path="/profile" 
+              element={
+                <ProtectedRoute 
+                loggedIn={loggedIn}>
+                  <Profile 
+                    onUpdateUser={handleUpdateUser}
+                    exitProfile={handleLogOut}
+                    onCheckToken={handleCheckToken}
+                    userErrorMessage={userErrorMessage}
+                    setUserErrorMessage={setUserErrorMessage} />
+                </ProtectedRoute>}>      
             </Route>
           </Routes>
         </CurrentUserContext.Provider>

@@ -13,9 +13,6 @@ function Register(props) {
   const emailInput = document.getElementById('emailRegister');
   const passwordInput = document.getElementById('passwordRegister');
   const submitButton = document.getElementById('buttonRegister')
-  /*const [isNameValid, setIsNameValid] = useState(false);
-  const [isEmailValid, setIsEmailValid] = useState(false);  
-  const [isPasswordValid, setIsPasswordValid] = useState(false);*/
   const nameErrorSpan = document.getElementById('usernameSpanRegister')
   const emailErrorSpan = document.getElementById('emailSpanRegister')
   const passwordErrorSpan = document.getElementById('passwordSpanRegister')
@@ -31,9 +28,23 @@ function Register(props) {
   }, [])
 
   function validate() {
-    if(emailInput && nameInput && passwordInput && !(emailInput.validationMessage || nameInput.validationMessage || passwordInput.validationMessage)) 
-    return (submitButton.classList.remove('register__button-disabled'), submitButton.classList.add('register__button-active'), submitButton.disabled = false); 
-    else if (emailInput && nameInput && passwordInput) return (submitButton.classList.remove('register__button-active'), submitButton.classList.add('register__button-disabled'), submitButton.disabled = true)
+    if(
+      emailInput 
+      && nameInput 
+      && passwordInput 
+      && !(emailInput.validationMessage || nameInput.validationMessage || passwordInput.validationMessage)) 
+      return (
+        submitButton.classList.remove('register__button-disabled'), 
+        submitButton.classList.add('register__button-active'), 
+        submitButton.disabled = false); 
+    else if (
+      emailInput 
+      && nameInput 
+      && passwordInput) 
+      return (
+        submitButton.classList.remove('register__button-active'), 
+        submitButton.classList.add('register__button-disabled'), 
+        submitButton.disabled = true)
   }
   
   return (
@@ -50,8 +61,12 @@ function Register(props) {
           <p className="register__title">
             Добро пожаловать!
           </p>
-          <form onSubmit={handleSubmit} className="register__form-container">
-            <span className="register__text">Имя</span>
+          <form 
+            onSubmit={handleSubmit} 
+            className="register__form-container">
+            <span className="register__text">
+              Имя
+            </span>
             <input 
               className="register__input" 
               required
@@ -66,11 +81,13 @@ function Register(props) {
               onChange={e => {
                 setUserName(e.target.value);
                 validate();
-                if (nameInput) return (nameErrorSpan.textContent = nameInput.validationMessage);
-                /*if (nameInput && nameInput.validity.valid) return setIsNameValid(true);
-              else return setIsNameValid(false)*/}} />
+                if (nameInput) 
+                  return (nameErrorSpan.textContent = nameInput.validationMessage);
+              }} />
             <span className="register__text input-userNameRegister-error register__input-error" id='usernameSpanRegister'> </span>
-            <span className="register__text">E-mail</span>
+            <span className="register__text">
+              E-mail
+            </span>
             <input 
               required
               className="register__input" 
@@ -82,11 +99,15 @@ function Register(props) {
               onChange={e => {
                 setEmail(e.target.value);
                 validate();
-                if (emailInput) return (emailErrorSpan.textContent = emailInput.validationMessage);
-                /*if (emailInput && emailInput.validity.valid) return setIsEmailValid(true); 
-              else return setIsEmailValid(false)*/}} />
-            <span className="register__text input-emailRegister-error register__input-error" id='emailSpanRegister'> </span>
-            <span className="register__text">Пароль</span>
+                if (emailInput) 
+                  return (emailErrorSpan.textContent = emailInput.validationMessage);
+              }} />
+            <span 
+              className="register__text input-emailRegister-error register__input-error" 
+              id='emailSpanRegister'> </span>
+            <span className="register__text">
+              Пароль
+            </span>
             <input 
               required
               className="register__input" 
@@ -98,22 +119,35 @@ function Register(props) {
               onChange={e => {
                 setPassword(e.target.value); 
                 validate();
-                if(passwordInput) return (passwordErrorSpan.textContent = passwordInput.validationMessage);
-                /*if (passwordInput && passwordInput.validity.valid) return setIsPasswordValid(true); 
-              else return setIsPasswordValid(false)*/}} />
-            <span className="register__text input-emailLRegister-error register__input-error" id='passwordSpanRegister'> </span>
-            {userErrorMessage !== '' && <p className="register__text-error">{userErrorMessage}</p>}
+                if(passwordInput) 
+                  return (passwordErrorSpan.textContent = passwordInput.validationMessage);
+              }} />
+            <span 
+              className="register__text input-emailLRegister-error register__input-error" 
+              id='passwordSpanRegister'> </span>
+            {userErrorMessage !== '' && 
+              <p className="register__text-error">
+                {userErrorMessage}
+              </p>
+            }
             <button 
               type="submit" 
               onSubmit={handleSubmit} 
-              className=/*{(isNameValid && isEmailValid && isPasswordValid) ? "register__button register__button-active" : " register__button register__button-disabled"}*/"register__button register__button-active"
+              className="register__button register__button-active"
               disabled
-              id="buttonRegister">Зарегистрироваться
+              id="buttonRegister">
+                Зарегистрироваться
             </button>
           </form>
           <div className="register__link-container">
-            <p className="register__underbottom-text">Уже зарегистрированы?</p>
-            <Link to="/sign-in" className="register__underbottom-text register__link">Войти</Link>
+            <p className="register__underbottom-text">
+              Уже зарегистрированы?
+            </p>
+            <Link 
+              to="/sign-in" 
+              className="register__underbottom-text register__link">
+                Войти
+            </Link>
           </div>
         </div>  
       </section>
