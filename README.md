@@ -13,6 +13,6 @@
 * HTML и CSS ⌨️
 
 **Ссылка на макет: https://disk.yandex.ru/d/NZiG5nX75f0R8g**
-**Репозиторий с бэкендом: https://github.com/krokodila888/movies-explorer-api**
+**Репозиторий с бэкендом: https://github.com/krokodila888/movies-explorer-api/tree/level-2**
  
 **Деплой проекта: Демо проекта https://movies-for-study.online/**
