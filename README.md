@@ -16,3 +16,4 @@
 #### **Репозиторий с бэкендом: https://github.com/krokodila888/movies-explorer-api/tree/level-2**
  
 #### **Деплой проекта: https://movies-for-study.online/**
+*(дизайн не слишком мне нравится, но макет выдавался программно)
